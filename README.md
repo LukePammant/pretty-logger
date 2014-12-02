@@ -38,15 +38,17 @@ Usage
 Config options
 --------------
 
+For the `error`, `info`, `warn`, `debug`, and `trace` commands you can find the accepted colors on the [colors](https://github.com/marak/colors.js/) repo.
+
 * `showTimestamp` - Show the timestamp with every message.
 * `showMillis` - Show milliseconds in the timestamp.
 * `printObjFunc` - The function to apply objects to, if logged. Default is util.inspect.
 * `prefix` - String that is prepended to every message logged with this instance.
-* `error`- String that represents the color of the error text. Accepted colors can be found on the [colors](https://github.com/marak/colors.js/) repo. Default is "red". 
-* `info`- String that represents the color of the info text. Accepted colors can be found on the [colors](https://github.com/marak/colors.js/) repo. Default is "green".
-* `warn`- String that represents the color of the warning text. Accepted colors can be found on the [colors](https://github.com/marak/colors.js/) repo. Default is "yellow".
-* `debug`- String that represents the color of the debug text. Accepted colors can be found on the [colors](https://github.com/marak/colors.js/) repo. Default is "blue".
-* `trace`- String that represents the color of the trace text. Accepted colors can be found on the [colors](https://github.com/marak/colors.js/) repo. Default is "gray".
+* `error`- String that represents the color of the error text. Default is "red". 
+* `info`- String that represents the color of the info text. Default is "green".
+* `warn`- String that represents the color of the warning text. Default is "yellow".
+* `debug`- String that represents the color of the debug text. Default is "blue".
+* `trace`- String that represents the color of the trace text. Default is "gray".
 
 Future versions
 ---------------
