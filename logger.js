@@ -11,7 +11,12 @@
     showMillis: false,
     showTimestamp: true,
     printObjFunc: require('util').inspect,
-    prefix: ""
+    prefix: "",
+    error: "red",
+    info: "green",
+    warn: "yellow",
+    debug: "blue",
+    trace: "gray"
   };
 
   logLevel = 4;
@@ -94,42 +99,42 @@
     Logger.prototype.error = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.red, 'error');
+      args.unshift(msg[this.config.error], 'error');
       return this.log.apply(this, args);
     };
 
     Logger.prototype.info = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.green, 'info');
+      args.unshift(msg[this.config.info], 'info');
       return this.log.apply(this, args);
     };
 
     Logger.prototype.warn = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.yellow, 'warning');
+      args.unshift(msg[this.config.warn], 'warning');
       return this.log.apply(this, args);
     };
 
     Logger.prototype.warning = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.yellow, 'warning');
+      args.unshift(msg[this.config.warn], 'warning');
       return this.log.apply(this, args);
     };
 
     Logger.prototype.debug = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.blue, 'debug');
+      args.unshift(msg[this.config.debug], 'debug');
       return this.log.apply(this, args);
     };
 
     Logger.prototype.trace = function() {
       var args, msg;
       msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      args.unshift(msg.gray, 'trace');
+      args.unshift(msg[this.config.gray], 'trace');
       return this.log.apply(this, args);
     };
 
