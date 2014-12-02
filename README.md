@@ -2,7 +2,7 @@ Pretty-Logger
 ============
 
 Pretty Logger for nodejs allows for color coded error, warning, info, debug and trace console messages with (or without) timestamp.
-This is a modified version of the <a href="https://github.com/sbsoftware/node-basic-logger">basic-logger</a> project. 
+This is a modified version of the [https://github.com/sbsoftware/node-basic-logger](basic-logger) project to use [https://github.com/marak/colors.js/](colors). 
 
 
 Installation
