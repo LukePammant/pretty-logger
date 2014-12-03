@@ -9,7 +9,7 @@ This is a modified version of the [basic-logger](https://github.com/sbsoftware/n
 Installation
 ------------
 
-	npm install pretty-logger
+	npm install pretty-logger --save
 
 Usage
 -----
@@ -38,7 +38,7 @@ Usage
 Config options
 --------------
 
-For the `error`, `info`, `warn`, `debug`, and `trace` commands you can find the accepted colors on the [colors](https://github.com/marak/colors.js/) repo.
+For the `error`, `info`, `warn`, `debug`, and `trace` properties you can find the accepted colors on the [colors](https://github.com/marak/colors.js/) repo.
 
 * `showTimestamp` - Show the timestamp with every message.
 * `showMillis` - Show milliseconds in the timestamp.

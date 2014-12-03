@@ -1,43 +1,41 @@
 {
-    "name": "pretty-logger",
-    "version": "0.0.1",
-    "description": "A colorized extenstion of 'basic-logger' supporting error, warning, debug and info messages with timestamp.",
-    "author": {
-        "name": "Luke Pammant",
-        "email": "luke@pammant.com"
-    },
-    "repository": {
-        "url": "https://github.com/LukePammant/pretty-logger"
-    },
-    "keywords": [
-        "basic logger",
-        "log",
-        "logging",
-        "timestamp",
-        "log to console",
-        "pretty logger"
-    ],
-    "dependencies": {
-        "pkginfo": "0.2.x",
-        "underscore": "1.2.x",
-        "colors": "1.0.3"
-    },
-    "devDependencies": {
-        "coffee-script": "1.2.x",
-        "vows": "0.5.x"
-    },
-    "main": "logger.js",
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://opensource.org/licenses/mit-license.php"
-        }
-    ],
-    "engines": {
-        "node": ">= 0.4"
-    },
-    "readme": "Pretty-Logger\n============\n\nPretty logger for nodejs supporting error, warning, info, debug and trace messages with (or without) timestamp.\nEverything you log is printed to the console.\n\nInstallation\n------------\n\n\tnpm install basic-logger\n\nUsage\n-----\n\n\tvar Logger = require('basic-logger');\n\t// configure level one time, it will be set to every instance of the logger\n\tLogger.setLevel('warning'); // only warnings and errors will be shown\n\tLogger.setLevel('warning', true); // only warnings and errors will be shown and no message about the level change will be printed\n\n\tvar customConfig = {\n\t\tshowMillis: true;\n\t\tshowTimestamp: true;\n\t};\n\n\tvar log = new Logger(customConfig) // custom config parameters will be used, defaults will be used for the other parameters\n\n\tlog.error('An error occurred');\n\tlog.warn('I am not kidding!');\n\tlog.info('you just screwed this');\n\tlog.debug('this code is still alive...');\n\tlog.trace('we are here.');\n\t\nConfig options\n--------------\n\n* `showTimestamp` - Show the timestamp with every message.\n* `showMillis` - Show milliseconds in the timestamp.\n* `printObjFunc` - The function to apply objects to, if logged. Default is util.inspect.\n* `prefix` - String that is prepended to every message logged with this instance.\n\nTest\n----\n\nYou'll need `vows`. Then just run `npm test`.\n\nFuture versions\n---------------\n\n* support for colored log messages\n* log to file\n",
-    "readmeFilename": "README.md",
-    "_id": "basic-logger@0.1.0",
-    "directories": { }
+  "name": "pretty-logger",
+  "version": "0.1.0",
+  "description": "A colorized extenstion of 'basic-logger' supporting error, warning, debug and info messages with timestamp.",
+  "author": {
+    "name": "Luke Pammant",
+    "email": "luke@pammant.com"
+  },
+  "repository": {
+    "url": "https://github.com/LukePammant/pretty-logger"
+  },
+  "keywords": [
+    "pretty logger",
+    "basic logger",
+    "log",
+    "logging",
+    "timestamp",
+    "log to console",
+    "colored logs"
+  ],
+  "dependencies": {
+    "basic-logger": "^0.4.4",
+    "colors": "1.0.3",
+    "pkginfo": "0.2.x",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {},
+  "main": "pretty-logger.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "readmeFilename": "README.md",
+  "_id": "pretty-logger@0.1.0",
+  "directories": {}
 }
