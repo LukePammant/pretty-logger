@@ -33,12 +33,13 @@ Usage
 	};
 
 	var log = new Logger(customConfig) // custom config parameters will be used, defaults will be used for the other parameters
+	//var log = new Logger(); // you can also do this to accept the defaults
 
-	log.error('An error occurred'); //This will be displayed in red
-	log.warn('Something isn't right); //This will be displayed in yellow
-	log.info('Something just happened, thought you should know!'); //This will be displayed in green
-	log.debug('Here are some notes to help you figure out whats going on'); //This will be displayed in blue
-	log.trace('Heres some more stuff '); //This will be displayed in gray
+	log.error("An error occurred"); // will be red
+	log.warn("I've got a bad feeling about this!"); // will be yellow
+	log.info('Something just happened, thought you should know!'); // will be green
+	log.debug('The value of x is: ' + x); // will be blue
+	log.trace('Heres some more stuff to help out.'); // will be gray
 ```
 
 Config options
