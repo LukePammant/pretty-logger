@@ -29,7 +29,7 @@ Usage
 		showTimestamp: true,
 		info: "gray",
 		error: "magenta",
-		info: "orange"
+		debug: "white"
 	};
 
 	var log = new Logger(customConfig) // custom config parameters will be used, defaults will be used for the other parameters
