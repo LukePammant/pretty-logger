@@ -4,12 +4,17 @@ Pretty-Logger
 Pretty Logger for nodejs allows for color coded error, warning, info, debug and trace console messages with (or without) timestamp.
 This is a modified version of the [basic-logger](https://github.com/sbsoftware/node-basic-logger) project to use [colors](https://github.com/marak/colors.js/). 
 
-<img src="https://raw.githubusercontent.com/LukePammant/pretty-logger/master/screenshots/info.png" alt="Screenshot of info log" />
+<img src="https://raw.githubusercontent.com/LukePammant/pretty-logger/master/screenshots/info.png" alt="Screenshot of pretty logger in action" />
 
 Installation
 ------------
 
 	npm install pretty-logger --save
+
+Accepted Colors
+---------------
+
+black, red, green, yellow, blue, magenta, cyan, white, gray, grey
 
 Usage
 -----
@@ -22,7 +27,8 @@ Usage
 	var customConfig = {
 		showMillis: true,
 		showTimestamp: true,
-		error: "pink",
+		info: "gray",
+		error: "magenta",
 		info: "orange"
 	};
 
@@ -47,8 +53,8 @@ For the `error`, `info`, `warn`, `debug`, and `trace` properties you can find th
 * `error`- String that represents the color of the error text. Default is "red". 
 * `info`- String that represents the color of the info text. Default is "green".
 * `warn`- String that represents the color of the warning text. Default is "yellow".
-* `debug`- String that represents the color of the debug text. Default is "blue".
-* `trace`- String that represents the color of the trace text. Default is "gray".
+* `debug`- String that represents the color of the debug text. Default is "cyan".
+* `trace`- String that represents the color of the trace text. Default is "grey".
 
 Future versions
 ---------------
