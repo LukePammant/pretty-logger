@@ -15,6 +15,12 @@
 
     module.exports = PrettyLogger = (function () {
 
+        function formatForConfig (msg, config) {
+            return Array.isArray(config)
+                ? config.reduce(function (m, c) { return m[c]; }, msg)
+                : msg[config];
+        }
+        
         PrettyLogger.setLevel = BasicLogger.setLevel;
         function PrettyLogger(config) {
             if (config == null) config = {};
@@ -24,42 +30,42 @@
             BasicLogger.prototype.error = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.error], 'error');
+                args.unshift(formatForConfig(msg, this.config.error), 'error');
                 return this.log.apply(this, args);
             };
 
             BasicLogger.prototype.info = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.info], 'info');
+                args.unshift(formatForConfig(msg, this.config.info), 'info');
                 return this.log.apply(this, args);
             };
 
             BasicLogger.prototype.warn = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.warn], 'warning');
+                args.unshift(formatForConfig(msg, this.config.warn), 'warning');
                 return this.log.apply(this, args);
             };
 
             BasicLogger.prototype.warning = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.warn], 'warning');
+                args.unshift(formatForConfig(msg, this.config.warn), 'warning');
                 return this.log.apply(this, args);
             };
 
             BasicLogger.prototype.debug = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.debug], 'debug');
+                args.unshift(formatForConfig(msg, this.config.debug), 'debug');
                 return this.log.apply(this, args);
             };
 
             BasicLogger.prototype.trace = function () {
                 var args, msg;
                 msg = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-                args.unshift(msg[this.config.trace], 'trace');
+                args.unshift(formatForConfig(msg, this.config.trace), 'trace');
                 return this.log.apply(this, args);
             };
 
