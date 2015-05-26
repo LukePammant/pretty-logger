@@ -65,5 +65,5 @@ Future versions
 
 v0.1.1
 ---------------
--Add ability to have multiple color/styles -Credit to wvbe
--Fix issue #3 reported by jackwilsdon
+* Add ability to have multiple color/styles -Credit to wvbe
+* Fix [issue #3](https://github.com/LukePammant/pretty-logger/issues/3) reported by jackwilsdon
