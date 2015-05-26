@@ -1,6 +1,6 @@
 {
   "name": "pretty-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A colorized extenstion of 'basic-logger' supporting error, warning, debug and info messages with timestamp.",
   "author": {
     "name": "Luke Pammant",
@@ -36,6 +36,6 @@
     "node": ">= 0.4"
   },
   "readmeFilename": "README.md",
-  "_id": "pretty-logger@0.1.0",
+  "_id": "pretty-logger@0.1.1",
   "directories": {}
 }
