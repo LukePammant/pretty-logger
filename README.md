@@ -14,7 +14,7 @@ Installation
 Accepted Colors
 ---------------
 
-black, red, green, yellow, blue, magenta, cyan, white, gray, grey, bgBlack, bgRed, bgGreen, bgYellow, bgBlue, bgMagenta, bgCyan, bgWhite, dim, rainbow, zebra, america, random, reset
+black, red, green, yellow, blue, magenta, cyan, white, gray, grey
 
 Usage
 -----
@@ -28,8 +28,8 @@ Usage
 		showMillis: true,
 		showTimestamp: true,
 		info: "gray",
-		error: ["bgRed", "bold"],
-		debug: "rainbow"
+		error: "magenta",
+		debug: "white"
 	};
 
 	var log = new Logger(customConfig) // custom config parameters will be used, defaults will be used for the other parameters
@@ -37,9 +37,9 @@ Usage
 
 	log.error("An error occurred"); // will be red
 	log.warn("I've got a bad feeling about this!"); // will be yellow
-	log.info("Something just happened, thought you should know!"); // will be green
-	log.debug("The value of x is: " + x); // will be blue
-	log.trace("Heres some more stuff to help out."); // will be gray
+	log.info('Something just happened, thought you should know!'); // will be green
+	log.debug('The value of x is: ' + x); // will be blue
+	log.trace('Heres some more stuff to help out.'); // will be gray
 ```
 
 Config options
@@ -51,13 +51,19 @@ For the `error`, `info`, `warn`, `debug`, and `trace` properties you can find th
 * `showMillis` - Show milliseconds in the timestamp.
 * `printObjFunc` - The function to apply objects to, if logged. Default is util.inspect.
 * `prefix` - String that is prepended to every message logged with this instance.
-* `error`- String or array that represents the color of the error text. Default is "red". 
-* `info`- String or array that represents the color of the info text. Default is "green".
-* `warn`- String or array that represents the color of the warning text. Default is "yellow".
-* `debug`- String or array that represents the color of the debug text. Default is "cyan".
-* `trace`- String or array that represents the color of the trace text. Default is "grey".
+* `error`- String that represents the color of the error text. Default is "red". 
+* `info`- String that represents the color of the info text. Default is "green".
+* `warn`- String that represents the color of the warning text. Default is "yellow".
+* `debug`- String that represents the color of the debug text. Default is "cyan".
+* `trace`- String that represents the color of the trace text. Default is "grey".
 
 Future versions
 ---------------
 
 * log to file
+
+
+v0.1.1
+---------------
+-Add ability to have multiple color/styles -Credit to wvbe
+-Fix issue #3 reported by jackwilsdon
